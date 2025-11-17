@@ -1,0 +1,877 @@
+DEBUG - 2025-11-03 12:36:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-03 12:37:01 --> mysqli_sql_exception: Table 'gsb_frais2025.visiteur' doesn't exist in Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `idvisit...', 0)
+#1 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `idvisit...')
+#2 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `idvisit...')
+#3 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `idvisit...', Array, false)
+#4 Z:\BTS2\AP\GSBFrais-V2 - Copie\app\Models\GsbModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+#5 Z:\BTS2\AP\GSBFrais-V2 - Copie\app\Controllers\Connexion.php(52): App\Models\GsbModel->get_infos_visiteur('testvisiteur', 'test')
+#6 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+#7 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+#8 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 Z:\BTS2\AP\GSBFrais-V2 - Copie\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBF...')
+#13 {main}
+CRITICAL - 2025-11-03 12:37:01 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'gsb_frais2025.visiteur' doesn't exist
+[Method: POST, Route: connexion/valider]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `idvisiteur`, `nom`, `prenom`, `login`
+FROM `visiteur`
+WHERE `login` = :login:
+AND `mdp` = :mdp:', [...], false)
+ 2 APPPATH\Models\GsbModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Connexion.php(52): App\Models\GsbModel->get_infos_visiteur('testvisiteur', 'test')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+CRITICAL - 2025-11-03 12:37:01 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'gsb_frais2025.visiteur' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `idvisiteur`, `nom`, `prenom`, `login`
+FROM `visiteur`
+WHERE `login` = \'testvisiteur\'
+AND `mdp` = \'test\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `idvisiteur`, `nom`, `prenom`, `login`
+FROM `visiteur`
+WHERE `login` = \'testvisiteur\'
+AND `mdp` = \'test\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `idvisiteur`, `nom`, `prenom`, `login`
+FROM `visiteur`
+WHERE `login` = :login:
+AND `mdp` = :mdp:', [...], false)
+ 4 APPPATH\Models\GsbModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Connexion.php(52): App\Models\GsbModel->get_infos_visiteur('testvisiteur', 'test')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+CRITICAL - 2025-11-03 12:37:02 --> [Caused by] mysqli_sql_exception: Table 'gsb_frais2025.visiteur' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `idvisiteur`, `nom`, `prenom`, `login`
+FROM `visiteur`
+WHERE `login` = \'testvisiteur\'
+AND `mdp` = \'test\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `idvisiteur`, `nom`, `prenom`, `login`
+FROM `visiteur`
+WHERE `login` = \'testvisiteur\'
+AND `mdp` = \'test\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `idvisiteur`, `nom`, `prenom`, `login`
+FROM `visiteur`
+WHERE `login` = \'testvisiteur\'
+AND `mdp` = \'test\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `idvisiteur`, `nom`, `prenom`, `login`
+FROM `visiteur`
+WHERE `login` = :login:
+AND `mdp` = :mdp:', [...], false)
+ 5 APPPATH\Models\GsbModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Connexion.php(52): App\Models\GsbModel->get_infos_visiteur('testvisiteur', 'test')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+DEBUG - 2025-11-03 12:39:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-03 12:39:45 --> ErrorException: Undefined array key "idvisiteur"
+[Method: POST, Route: connexion/valider]
+in APPPATH\Controllers\Connexion.php on line 56.
+ 1 APPPATH\Controllers\Connexion.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idvisiteur"', 'Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\app\\Controllers\\Connexion.php', 56)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+DEBUG - 2025-11-03 12:41:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-03 12:41:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-03 12:41:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-03 12:41:54 --> TypeError: App\Libraries\Gsb_lib::get_annee_from_anneemois(): Argument #1 ($annee_mois) must be of type string, null given, called in Z:\BTS2\AP\GSBFrais-V2 - Copie\app\Models\GsbModel.php on line 124
+[Method: GET, Route: gererfrais]
+in APPPATH\Libraries\Gsb_lib.php on line 29.
+ 1 APPPATH\Models\GsbModel.php(124): App\Libraries\Gsb_lib->get_annee_from_anneemois(null)
+ 2 APPPATH\Controllers\Gererfrais.php(45): App\Models\GsbModel->cree_nouvelles_lignes_frais(null, '2025', '11')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Gererfrais->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gererfrais))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+DEBUG - 2025-11-03 12:41:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-03 12:43:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-03 12:43:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-03 12:43:34 --> mysqli_sql_exception: Unknown column 'fichefrais.idUtilisateur' in 'where clause' in Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `fichefr...', 0)
+#1 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `fichefr...')
+#2 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `fichefr...')
+#3 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `fichefr...', Array, false)
+#4 Z:\BTS2\AP\GSBFrais-V2 - Copie\app\Models\GsbModel.php(50): CodeIgniter\Database\BaseBuilder->get()
+#5 Z:\BTS2\AP\GSBFrais-V2 - Copie\app\Controllers\Gererfrais.php(29): App\Models\GsbModel->get_id_ficheFrais(NULL, '2025', '11')
+#6 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\CodeIgniter.php(903): App\Controllers\Gererfrais->__construct()
+#7 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+#8 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 Z:\BTS2\AP\GSBFrais-V2 - Copie\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBF...')
+#13 {main}
+CRITICAL - 2025-11-03 12:43:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'fichefrais.idUtilisateur' in 'where clause'
+[Method: GET, Route: gererfrais]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `fichefrais`.`idFiche`, `fichefrais`.`idEtat`
+FROM `fichefrais`
+WHERE `fichefrais`.`idUtilisateur` IS NULL
+AND `fichefrais`.`annee` = :fichefrais.annee:
+AND `fichefrais`.`mois` = :fichefrais.mois:', [...], false)
+ 2 APPPATH\Models\GsbModel.php(50): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Gererfrais.php(29): App\Models\GsbModel->get_id_ficheFrais(null, '2025', '11')
+ 4 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Gererfrais->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+CRITICAL - 2025-11-03 12:43:34 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'fichefrais.idUtilisateur' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `fichefrais`.`idFiche`, `fichefrais`.`idEtat`
+FROM `fichefrais`
+WHERE `fichefrais`.`idUtilisateur` IS NULL
+AND `fichefrais`.`annee` = \'2025\'
+AND `fichefrais`.`mois` = \'11\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `fichefrais`.`idFiche`, `fichefrais`.`idEtat`
+FROM `fichefrais`
+WHERE `fichefrais`.`idUtilisateur` IS NULL
+AND `fichefrais`.`annee` = \'2025\'
+AND `fichefrais`.`mois` = \'11\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `fichefrais`.`idFiche`, `fichefrais`.`idEtat`
+FROM `fichefrais`
+WHERE `fichefrais`.`idUtilisateur` IS NULL
+AND `fichefrais`.`annee` = :fichefrais.annee:
+AND `fichefrais`.`mois` = :fichefrais.mois:', [...], false)
+ 4 APPPATH\Models\GsbModel.php(50): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Gererfrais.php(29): App\Models\GsbModel->get_id_ficheFrais(null, '2025', '11')
+ 6 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Gererfrais->__construct()
+ 7 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+CRITICAL - 2025-11-03 12:43:34 --> [Caused by] mysqli_sql_exception: Unknown column 'fichefrais.idUtilisateur' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `fichefrais`.`idFiche`, `fichefrais`.`idEtat`
+FROM `fichefrais`
+WHERE `fichefrais`.`idUtilisateur` IS NULL
+AND `fichefrais`.`annee` = \'2025\'
+AND `fichefrais`.`mois` = \'11\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `fichefrais`.`idFiche`, `fichefrais`.`idEtat`
+FROM `fichefrais`
+WHERE `fichefrais`.`idUtilisateur` IS NULL
+AND `fichefrais`.`annee` = \'2025\'
+AND `fichefrais`.`mois` = \'11\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `fichefrais`.`idFiche`, `fichefrais`.`idEtat`
+FROM `fichefrais`
+WHERE `fichefrais`.`idUtilisateur` IS NULL
+AND `fichefrais`.`annee` = \'2025\'
+AND `fichefrais`.`mois` = \'11\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `fichefrais`.`idFiche`, `fichefrais`.`idEtat`
+FROM `fichefrais`
+WHERE `fichefrais`.`idUtilisateur` IS NULL
+AND `fichefrais`.`annee` = :fichefrais.annee:
+AND `fichefrais`.`mois` = :fichefrais.mois:', [...], false)
+ 5 APPPATH\Models\GsbModel.php(50): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Gererfrais.php(29): App\Models\GsbModel->get_id_ficheFrais(null, '2025', '11')
+ 7 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Gererfrais->__construct()
+ 8 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+DEBUG - 2025-11-03 12:45:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-03 12:45:08 --> mysqli_sql_exception: Unknown column 'idUtilisateur' in 'where clause' in Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT CONCAT(a...', 0)
+#1 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT CONCAT(a...')
+#2 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT CONCAT(a...')
+#3 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT CONCAT(a...', Array, false)
+#4 Z:\BTS2\AP\GSBFrais-V2 - Copie\app\Models\GsbModel.php(38): CodeIgniter\Database\BaseBuilder->get()
+#5 Z:\BTS2\AP\GSBFrais-V2 - Copie\app\Controllers\Etatfrais.php(57): App\Models\GsbModel->get_les_mois_disponibles(NULL)
+#6 Z:\BTS2\AP\GSBFrais-V2 - Copie\app\Controllers\Etatfrais.php(36): App\Controllers\Etatfrais->commun()
+#7 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\CodeIgniter.php(933): App\Controllers\Etatfrais->index()
+#8 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Etatfrais))
+#9 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 Z:\BTS2\AP\GSBFrais-V2 - Copie\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBF...')
+#14 {main}
+CRITICAL - 2025-11-03 12:45:08 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'idUtilisateur' in 'where clause'
+[Method: GET, Route: etatfrais]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT CONCAT(annee, mois) AS "anneemois", `annee`, `mois`
+FROM `fichefrais`
+WHERE `idUtilisateur` IS NULL
+ORDER BY `annee` DESC, `mois` DESC', [], false)
+ 2 APPPATH\Models\GsbModel.php(38): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Etatfrais.php(57): App\Models\GsbModel->get_les_mois_disponibles(null)
+ 4 APPPATH\Controllers\Etatfrais.php(36): App\Controllers\Etatfrais->commun()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Etatfrais->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Etatfrais))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+CRITICAL - 2025-11-03 12:45:08 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'idUtilisateur' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT CONCAT(annee, mois) AS "anneemois", `annee`, `mois`
+FROM `fichefrais`
+WHERE `idUtilisateur` IS NULL
+ORDER BY `annee` DESC, `mois` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT CONCAT(annee, mois) AS "anneemois", `annee`, `mois`
+FROM `fichefrais`
+WHERE `idUtilisateur` IS NULL
+ORDER BY `annee` DESC, `mois` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT CONCAT(annee, mois) AS "anneemois", `annee`, `mois`
+FROM `fichefrais`
+WHERE `idUtilisateur` IS NULL
+ORDER BY `annee` DESC, `mois` DESC', [], false)
+ 4 APPPATH\Models\GsbModel.php(38): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Etatfrais.php(57): App\Models\GsbModel->get_les_mois_disponibles(null)
+ 6 APPPATH\Controllers\Etatfrais.php(36): App\Controllers\Etatfrais->commun()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Etatfrais->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Etatfrais))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+CRITICAL - 2025-11-03 12:45:08 --> [Caused by] mysqli_sql_exception: Unknown column 'idUtilisateur' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT CONCAT(annee, mois) AS "anneemois", `annee`, `mois`
+FROM `fichefrais`
+WHERE `idUtilisateur` IS NULL
+ORDER BY `annee` DESC, `mois` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT CONCAT(annee, mois) AS "anneemois", `annee`, `mois`
+FROM `fichefrais`
+WHERE `idUtilisateur` IS NULL
+ORDER BY `annee` DESC, `mois` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT CONCAT(annee, mois) AS "anneemois", `annee`, `mois`
+FROM `fichefrais`
+WHERE `idUtilisateur` IS NULL
+ORDER BY `annee` DESC, `mois` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT CONCAT(annee, mois) AS "anneemois", `annee`, `mois`
+FROM `fichefrais`
+WHERE `idUtilisateur` IS NULL
+ORDER BY `annee` DESC, `mois` DESC', [], false)
+ 5 APPPATH\Models\GsbModel.php(38): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Etatfrais.php(57): App\Models\GsbModel->get_les_mois_disponibles(null)
+ 7 APPPATH\Controllers\Etatfrais.php(36): App\Controllers\Etatfrais->commun()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Etatfrais->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Etatfrais))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+DEBUG - 2025-11-03 12:45:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-03 12:45:56 --> mysqli_sql_exception: Unknown column 'fichefrais.idUtilisateur' in 'where clause' in Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `fichefr...', 0)
+#1 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `fichefr...')
+#2 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `fichefr...')
+#3 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `fichefr...', Array, false)
+#4 Z:\BTS2\AP\GSBFrais-V2 - Copie\app\Models\GsbModel.php(50): CodeIgniter\Database\BaseBuilder->get()
+#5 Z:\BTS2\AP\GSBFrais-V2 - Copie\app\Controllers\Gererfrais.php(29): App\Models\GsbModel->get_id_ficheFrais(NULL, '2025', '11')
+#6 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\CodeIgniter.php(903): App\Controllers\Gererfrais->__construct()
+#7 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+#8 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 Z:\BTS2\AP\GSBFrais-V2 - Copie\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBF...')
+#13 {main}
+CRITICAL - 2025-11-03 12:45:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'fichefrais.idUtilisateur' in 'where clause'
+[Method: GET, Route: gererfrais]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `fichefrais`.`idFiche`, `fichefrais`.`idEtat`
+FROM `fichefrais`
+WHERE `fichefrais`.`idUtilisateur` IS NULL
+AND `fichefrais`.`annee` = :fichefrais.annee:
+AND `fichefrais`.`mois` = :fichefrais.mois:', [...], false)
+ 2 APPPATH\Models\GsbModel.php(50): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Gererfrais.php(29): App\Models\GsbModel->get_id_ficheFrais(null, '2025', '11')
+ 4 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Gererfrais->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+CRITICAL - 2025-11-03 12:45:56 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'fichefrais.idUtilisateur' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `fichefrais`.`idFiche`, `fichefrais`.`idEtat`
+FROM `fichefrais`
+WHERE `fichefrais`.`idUtilisateur` IS NULL
+AND `fichefrais`.`annee` = \'2025\'
+AND `fichefrais`.`mois` = \'11\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `fichefrais`.`idFiche`, `fichefrais`.`idEtat`
+FROM `fichefrais`
+WHERE `fichefrais`.`idUtilisateur` IS NULL
+AND `fichefrais`.`annee` = \'2025\'
+AND `fichefrais`.`mois` = \'11\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `fichefrais`.`idFiche`, `fichefrais`.`idEtat`
+FROM `fichefrais`
+WHERE `fichefrais`.`idUtilisateur` IS NULL
+AND `fichefrais`.`annee` = :fichefrais.annee:
+AND `fichefrais`.`mois` = :fichefrais.mois:', [...], false)
+ 4 APPPATH\Models\GsbModel.php(50): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Gererfrais.php(29): App\Models\GsbModel->get_id_ficheFrais(null, '2025', '11')
+ 6 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Gererfrais->__construct()
+ 7 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+CRITICAL - 2025-11-03 12:45:57 --> [Caused by] mysqli_sql_exception: Unknown column 'fichefrais.idUtilisateur' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `fichefrais`.`idFiche`, `fichefrais`.`idEtat`
+FROM `fichefrais`
+WHERE `fichefrais`.`idUtilisateur` IS NULL
+AND `fichefrais`.`annee` = \'2025\'
+AND `fichefrais`.`mois` = \'11\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `fichefrais`.`idFiche`, `fichefrais`.`idEtat`
+FROM `fichefrais`
+WHERE `fichefrais`.`idUtilisateur` IS NULL
+AND `fichefrais`.`annee` = \'2025\'
+AND `fichefrais`.`mois` = \'11\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `fichefrais`.`idFiche`, `fichefrais`.`idEtat`
+FROM `fichefrais`
+WHERE `fichefrais`.`idUtilisateur` IS NULL
+AND `fichefrais`.`annee` = \'2025\'
+AND `fichefrais`.`mois` = \'11\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `fichefrais`.`idFiche`, `fichefrais`.`idEtat`
+FROM `fichefrais`
+WHERE `fichefrais`.`idUtilisateur` IS NULL
+AND `fichefrais`.`annee` = :fichefrais.annee:
+AND `fichefrais`.`mois` = :fichefrais.mois:', [...], false)
+ 5 APPPATH\Models\GsbModel.php(50): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Gererfrais.php(29): App\Models\GsbModel->get_id_ficheFrais(null, '2025', '11')
+ 7 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Gererfrais->__construct()
+ 8 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+DEBUG - 2025-11-03 12:53:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-03 12:53:48 --> mysqli_sql_exception: Unknown column 'fichefrais.idUtilisateur' in 'where clause' in Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `fichefr...', 0)
+#1 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `fichefr...')
+#2 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `fichefr...')
+#3 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `fichefr...', Array, false)
+#4 Z:\BTS2\AP\GSBFrais-V2 - Copie\app\Models\GsbModel.php(50): CodeIgniter\Database\BaseBuilder->get()
+#5 Z:\BTS2\AP\GSBFrais-V2 - Copie\app\Controllers\Gererfrais.php(29): App\Models\GsbModel->get_id_ficheFrais('a000', '2025', '11')
+#6 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\CodeIgniter.php(903): App\Controllers\Gererfrais->__construct()
+#7 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+#8 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 Z:\BTS2\AP\GSBFrais-V2 - Copie\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBF...')
+#13 {main}
+CRITICAL - 2025-11-03 12:53:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'fichefrais.idUtilisateur' in 'where clause'
+[Method: GET, Route: gererfrais]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `fichefrais`.`idFiche`, `fichefrais`.`idEtat`
+FROM `fichefrais`
+WHERE `fichefrais`.`idUtilisateur` = :fichefrais.idUtilisateur:
+AND `fichefrais`.`annee` = :fichefrais.annee:
+AND `fichefrais`.`mois` = :fichefrais.mois:', [...], false)
+ 2 APPPATH\Models\GsbModel.php(50): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Gererfrais.php(29): App\Models\GsbModel->get_id_ficheFrais('a000', '2025', '11')
+ 4 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Gererfrais->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+CRITICAL - 2025-11-03 12:53:48 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'fichefrais.idUtilisateur' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `fichefrais`.`idFiche`, `fichefrais`.`idEtat`
+FROM `fichefrais`
+WHERE `fichefrais`.`idUtilisateur` = \'a000\'
+AND `fichefrais`.`annee` = \'2025\'
+AND `fichefrais`.`mois` = \'11\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `fichefrais`.`idFiche`, `fichefrais`.`idEtat`
+FROM `fichefrais`
+WHERE `fichefrais`.`idUtilisateur` = \'a000\'
+AND `fichefrais`.`annee` = \'2025\'
+AND `fichefrais`.`mois` = \'11\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `fichefrais`.`idFiche`, `fichefrais`.`idEtat`
+FROM `fichefrais`
+WHERE `fichefrais`.`idUtilisateur` = :fichefrais.idUtilisateur:
+AND `fichefrais`.`annee` = :fichefrais.annee:
+AND `fichefrais`.`mois` = :fichefrais.mois:', [...], false)
+ 4 APPPATH\Models\GsbModel.php(50): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Gererfrais.php(29): App\Models\GsbModel->get_id_ficheFrais('a000', '2025', '11')
+ 6 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Gererfrais->__construct()
+ 7 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+CRITICAL - 2025-11-03 12:53:48 --> [Caused by] mysqli_sql_exception: Unknown column 'fichefrais.idUtilisateur' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `fichefrais`.`idFiche`, `fichefrais`.`idEtat`
+FROM `fichefrais`
+WHERE `fichefrais`.`idUtilisateur` = \'a000\'
+AND `fichefrais`.`annee` = \'2025\'
+AND `fichefrais`.`mois` = \'11\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `fichefrais`.`idFiche`, `fichefrais`.`idEtat`
+FROM `fichefrais`
+WHERE `fichefrais`.`idUtilisateur` = \'a000\'
+AND `fichefrais`.`annee` = \'2025\'
+AND `fichefrais`.`mois` = \'11\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `fichefrais`.`idFiche`, `fichefrais`.`idEtat`
+FROM `fichefrais`
+WHERE `fichefrais`.`idUtilisateur` = \'a000\'
+AND `fichefrais`.`annee` = \'2025\'
+AND `fichefrais`.`mois` = \'11\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `fichefrais`.`idFiche`, `fichefrais`.`idEtat`
+FROM `fichefrais`
+WHERE `fichefrais`.`idUtilisateur` = :fichefrais.idUtilisateur:
+AND `fichefrais`.`annee` = :fichefrais.annee:
+AND `fichefrais`.`mois` = :fichefrais.mois:', [...], false)
+ 5 APPPATH\Models\GsbModel.php(50): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Gererfrais.php(29): App\Models\GsbModel->get_id_ficheFrais('a000', '2025', '11')
+ 7 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Gererfrais->__construct()
+ 8 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+DEBUG - 2025-11-03 12:53:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-03 12:53:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-03 12:53:55 --> mysqli_sql_exception: Unknown column 'fichefrais.idUtilisateur' in 'where clause' in Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `fichefr...', 0)
+#1 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `fichefr...')
+#2 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `fichefr...')
+#3 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `fichefr...', Array, false)
+#4 Z:\BTS2\AP\GSBFrais-V2 - Copie\app\Models\GsbModel.php(50): CodeIgniter\Database\BaseBuilder->get()
+#5 Z:\BTS2\AP\GSBFrais-V2 - Copie\app\Controllers\Gererfrais.php(29): App\Models\GsbModel->get_id_ficheFrais('a000', '2025', '11')
+#6 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\CodeIgniter.php(903): App\Controllers\Gererfrais->__construct()
+#7 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+#8 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 Z:\BTS2\AP\GSBFrais-V2 - Copie\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBF...')
+#13 {main}
+CRITICAL - 2025-11-03 12:53:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'fichefrais.idUtilisateur' in 'where clause'
+[Method: GET, Route: gererfrais]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `fichefrais`.`idFiche`, `fichefrais`.`idEtat`
+FROM `fichefrais`
+WHERE `fichefrais`.`idUtilisateur` = :fichefrais.idUtilisateur:
+AND `fichefrais`.`annee` = :fichefrais.annee:
+AND `fichefrais`.`mois` = :fichefrais.mois:', [...], false)
+ 2 APPPATH\Models\GsbModel.php(50): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Gererfrais.php(29): App\Models\GsbModel->get_id_ficheFrais('a000', '2025', '11')
+ 4 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Gererfrais->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+CRITICAL - 2025-11-03 12:53:55 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'fichefrais.idUtilisateur' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `fichefrais`.`idFiche`, `fichefrais`.`idEtat`
+FROM `fichefrais`
+WHERE `fichefrais`.`idUtilisateur` = \'a000\'
+AND `fichefrais`.`annee` = \'2025\'
+AND `fichefrais`.`mois` = \'11\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `fichefrais`.`idFiche`, `fichefrais`.`idEtat`
+FROM `fichefrais`
+WHERE `fichefrais`.`idUtilisateur` = \'a000\'
+AND `fichefrais`.`annee` = \'2025\'
+AND `fichefrais`.`mois` = \'11\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `fichefrais`.`idFiche`, `fichefrais`.`idEtat`
+FROM `fichefrais`
+WHERE `fichefrais`.`idUtilisateur` = :fichefrais.idUtilisateur:
+AND `fichefrais`.`annee` = :fichefrais.annee:
+AND `fichefrais`.`mois` = :fichefrais.mois:', [...], false)
+ 4 APPPATH\Models\GsbModel.php(50): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Gererfrais.php(29): App\Models\GsbModel->get_id_ficheFrais('a000', '2025', '11')
+ 6 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Gererfrais->__construct()
+ 7 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+CRITICAL - 2025-11-03 12:53:55 --> [Caused by] mysqli_sql_exception: Unknown column 'fichefrais.idUtilisateur' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `fichefrais`.`idFiche`, `fichefrais`.`idEtat`
+FROM `fichefrais`
+WHERE `fichefrais`.`idUtilisateur` = \'a000\'
+AND `fichefrais`.`annee` = \'2025\'
+AND `fichefrais`.`mois` = \'11\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `fichefrais`.`idFiche`, `fichefrais`.`idEtat`
+FROM `fichefrais`
+WHERE `fichefrais`.`idUtilisateur` = \'a000\'
+AND `fichefrais`.`annee` = \'2025\'
+AND `fichefrais`.`mois` = \'11\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `fichefrais`.`idFiche`, `fichefrais`.`idEtat`
+FROM `fichefrais`
+WHERE `fichefrais`.`idUtilisateur` = \'a000\'
+AND `fichefrais`.`annee` = \'2025\'
+AND `fichefrais`.`mois` = \'11\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `fichefrais`.`idFiche`, `fichefrais`.`idEtat`
+FROM `fichefrais`
+WHERE `fichefrais`.`idUtilisateur` = :fichefrais.idUtilisateur:
+AND `fichefrais`.`annee` = :fichefrais.annee:
+AND `fichefrais`.`mois` = :fichefrais.mois:', [...], false)
+ 5 APPPATH\Models\GsbModel.php(50): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Gererfrais.php(29): App\Models\GsbModel->get_id_ficheFrais('a000', '2025', '11')
+ 7 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Gererfrais->__construct()
+ 8 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+DEBUG - 2025-11-03 12:54:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-03 12:54:02 --> mysqli_sql_exception: Unknown column 'idUtilisateur' in 'where clause' in Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT CONCAT(a...', 0)
+#1 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT CONCAT(a...')
+#2 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT CONCAT(a...')
+#3 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT CONCAT(a...', Array, false)
+#4 Z:\BTS2\AP\GSBFrais-V2 - Copie\app\Models\GsbModel.php(38): CodeIgniter\Database\BaseBuilder->get()
+#5 Z:\BTS2\AP\GSBFrais-V2 - Copie\app\Controllers\Etatfrais.php(57): App\Models\GsbModel->get_les_mois_disponibles('a000')
+#6 Z:\BTS2\AP\GSBFrais-V2 - Copie\app\Controllers\Etatfrais.php(36): App\Controllers\Etatfrais->commun()
+#7 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\CodeIgniter.php(933): App\Controllers\Etatfrais->index()
+#8 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Etatfrais))
+#9 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 Z:\BTS2\AP\GSBFrais-V2 - Copie\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBF...')
+#14 {main}
+CRITICAL - 2025-11-03 12:54:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'idUtilisateur' in 'where clause'
+[Method: GET, Route: etatfrais]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT CONCAT(annee, mois) AS "anneemois", `annee`, `mois`
+FROM `fichefrais`
+WHERE `idUtilisateur` = :idUtilisateur:
+ORDER BY `annee` DESC, `mois` DESC', [...], false)
+ 2 APPPATH\Models\GsbModel.php(38): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Etatfrais.php(57): App\Models\GsbModel->get_les_mois_disponibles('a000')
+ 4 APPPATH\Controllers\Etatfrais.php(36): App\Controllers\Etatfrais->commun()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Etatfrais->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Etatfrais))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+CRITICAL - 2025-11-03 12:54:02 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'idUtilisateur' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT CONCAT(annee, mois) AS "anneemois", `annee`, `mois`
+FROM `fichefrais`
+WHERE `idUtilisateur` = \'a000\'
+ORDER BY `annee` DESC, `mois` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT CONCAT(annee, mois) AS "anneemois", `annee`, `mois`
+FROM `fichefrais`
+WHERE `idUtilisateur` = \'a000\'
+ORDER BY `annee` DESC, `mois` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT CONCAT(annee, mois) AS "anneemois", `annee`, `mois`
+FROM `fichefrais`
+WHERE `idUtilisateur` = :idUtilisateur:
+ORDER BY `annee` DESC, `mois` DESC', [...], false)
+ 4 APPPATH\Models\GsbModel.php(38): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Etatfrais.php(57): App\Models\GsbModel->get_les_mois_disponibles('a000')
+ 6 APPPATH\Controllers\Etatfrais.php(36): App\Controllers\Etatfrais->commun()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Etatfrais->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Etatfrais))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+CRITICAL - 2025-11-03 12:54:02 --> [Caused by] mysqli_sql_exception: Unknown column 'idUtilisateur' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT CONCAT(annee, mois) AS "anneemois", `annee`, `mois`
+FROM `fichefrais`
+WHERE `idUtilisateur` = \'a000\'
+ORDER BY `annee` DESC, `mois` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT CONCAT(annee, mois) AS "anneemois", `annee`, `mois`
+FROM `fichefrais`
+WHERE `idUtilisateur` = \'a000\'
+ORDER BY `annee` DESC, `mois` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT CONCAT(annee, mois) AS "anneemois", `annee`, `mois`
+FROM `fichefrais`
+WHERE `idUtilisateur` = \'a000\'
+ORDER BY `annee` DESC, `mois` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT CONCAT(annee, mois) AS "anneemois", `annee`, `mois`
+FROM `fichefrais`
+WHERE `idUtilisateur` = :idUtilisateur:
+ORDER BY `annee` DESC, `mois` DESC', [...], false)
+ 5 APPPATH\Models\GsbModel.php(38): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Etatfrais.php(57): App\Models\GsbModel->get_les_mois_disponibles('a000')
+ 7 APPPATH\Controllers\Etatfrais.php(36): App\Controllers\Etatfrais->commun()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Etatfrais->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Etatfrais))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+DEBUG - 2025-11-03 12:58:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-03 12:58:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-03 12:58:21 --> mysqli_sql_exception: Unknown column 'fichefrais.idUtilisateur' in 'where clause' in Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `fichefr...', 0)
+#1 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `fichefr...')
+#2 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `fichefr...')
+#3 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `fichefr...', Array, false)
+#4 Z:\BTS2\AP\GSBFrais-V2 - Copie\app\Models\GsbModel.php(50): CodeIgniter\Database\BaseBuilder->get()
+#5 Z:\BTS2\AP\GSBFrais-V2 - Copie\app\Controllers\Gererfrais.php(29): App\Models\GsbModel->get_id_ficheFrais(NULL, '2025', '11')
+#6 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\CodeIgniter.php(903): App\Controllers\Gererfrais->__construct()
+#7 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+#8 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 Z:\BTS2\AP\GSBFrais-V2 - Copie\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBF...')
+#13 {main}
+CRITICAL - 2025-11-03 12:58:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'fichefrais.idUtilisateur' in 'where clause'
+[Method: GET, Route: gererfrais]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `fichefrais`.`idFiche`, `fichefrais`.`idEtat`
+FROM `fichefrais`
+WHERE `fichefrais`.`idUtilisateur` IS NULL
+AND `fichefrais`.`annee` = :fichefrais.annee:
+AND `fichefrais`.`mois` = :fichefrais.mois:', [...], false)
+ 2 APPPATH\Models\GsbModel.php(50): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Gererfrais.php(29): App\Models\GsbModel->get_id_ficheFrais(null, '2025', '11')
+ 4 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Gererfrais->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+CRITICAL - 2025-11-03 12:58:22 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'fichefrais.idUtilisateur' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `fichefrais`.`idFiche`, `fichefrais`.`idEtat`
+FROM `fichefrais`
+WHERE `fichefrais`.`idUtilisateur` IS NULL
+AND `fichefrais`.`annee` = \'2025\'
+AND `fichefrais`.`mois` = \'11\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `fichefrais`.`idFiche`, `fichefrais`.`idEtat`
+FROM `fichefrais`
+WHERE `fichefrais`.`idUtilisateur` IS NULL
+AND `fichefrais`.`annee` = \'2025\'
+AND `fichefrais`.`mois` = \'11\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `fichefrais`.`idFiche`, `fichefrais`.`idEtat`
+FROM `fichefrais`
+WHERE `fichefrais`.`idUtilisateur` IS NULL
+AND `fichefrais`.`annee` = :fichefrais.annee:
+AND `fichefrais`.`mois` = :fichefrais.mois:', [...], false)
+ 4 APPPATH\Models\GsbModel.php(50): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Gererfrais.php(29): App\Models\GsbModel->get_id_ficheFrais(null, '2025', '11')
+ 6 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Gererfrais->__construct()
+ 7 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+CRITICAL - 2025-11-03 12:58:22 --> [Caused by] mysqli_sql_exception: Unknown column 'fichefrais.idUtilisateur' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `fichefrais`.`idFiche`, `fichefrais`.`idEtat`
+FROM `fichefrais`
+WHERE `fichefrais`.`idUtilisateur` IS NULL
+AND `fichefrais`.`annee` = \'2025\'
+AND `fichefrais`.`mois` = \'11\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `fichefrais`.`idFiche`, `fichefrais`.`idEtat`
+FROM `fichefrais`
+WHERE `fichefrais`.`idUtilisateur` IS NULL
+AND `fichefrais`.`annee` = \'2025\'
+AND `fichefrais`.`mois` = \'11\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `fichefrais`.`idFiche`, `fichefrais`.`idEtat`
+FROM `fichefrais`
+WHERE `fichefrais`.`idUtilisateur` IS NULL
+AND `fichefrais`.`annee` = \'2025\'
+AND `fichefrais`.`mois` = \'11\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `fichefrais`.`idFiche`, `fichefrais`.`idEtat`
+FROM `fichefrais`
+WHERE `fichefrais`.`idUtilisateur` IS NULL
+AND `fichefrais`.`annee` = :fichefrais.annee:
+AND `fichefrais`.`mois` = :fichefrais.mois:', [...], false)
+ 5 APPPATH\Models\GsbModel.php(50): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Gererfrais.php(29): App\Models\GsbModel->get_id_ficheFrais(null, '2025', '11')
+ 7 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Gererfrais->__construct()
+ 8 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+DEBUG - 2025-11-03 13:22:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-03 13:22:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-03 13:22:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-03 13:22:18 --> mysqli_sql_exception: Unknown column 'fichefrais.idUtilisateur' in 'where clause' in Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `fichefr...', 0)
+#1 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `fichefr...')
+#2 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `fichefr...')
+#3 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `fichefr...', Array, false)
+#4 Z:\BTS2\AP\GSBFrais-V2 - Copie\app\Models\GsbModel.php(50): CodeIgniter\Database\BaseBuilder->get()
+#5 Z:\BTS2\AP\GSBFrais-V2 - Copie\app\Controllers\Gererfrais.php(29): App\Models\GsbModel->get_id_ficheFrais(NULL, '2025', '11')
+#6 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\CodeIgniter.php(903): App\Controllers\Gererfrais->__construct()
+#7 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+#8 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 Z:\BTS2\AP\GSBFrais-V2 - Copie\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBF...')
+#13 {main}
+CRITICAL - 2025-11-03 13:22:18 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'fichefrais.idUtilisateur' in 'where clause'
+[Method: GET, Route: gererfrais]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `fichefrais`.`idFiche`, `fichefrais`.`idEtat`
+FROM `fichefrais`
+WHERE `fichefrais`.`idUtilisateur` IS NULL
+AND `fichefrais`.`annee` = :fichefrais.annee:
+AND `fichefrais`.`mois` = :fichefrais.mois:', [...], false)
+ 2 APPPATH\Models\GsbModel.php(50): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Gererfrais.php(29): App\Models\GsbModel->get_id_ficheFrais(null, '2025', '11')
+ 4 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Gererfrais->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+CRITICAL - 2025-11-03 13:22:18 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'fichefrais.idUtilisateur' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `fichefrais`.`idFiche`, `fichefrais`.`idEtat`
+FROM `fichefrais`
+WHERE `fichefrais`.`idUtilisateur` IS NULL
+AND `fichefrais`.`annee` = \'2025\'
+AND `fichefrais`.`mois` = \'11\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `fichefrais`.`idFiche`, `fichefrais`.`idEtat`
+FROM `fichefrais`
+WHERE `fichefrais`.`idUtilisateur` IS NULL
+AND `fichefrais`.`annee` = \'2025\'
+AND `fichefrais`.`mois` = \'11\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `fichefrais`.`idFiche`, `fichefrais`.`idEtat`
+FROM `fichefrais`
+WHERE `fichefrais`.`idUtilisateur` IS NULL
+AND `fichefrais`.`annee` = :fichefrais.annee:
+AND `fichefrais`.`mois` = :fichefrais.mois:', [...], false)
+ 4 APPPATH\Models\GsbModel.php(50): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Gererfrais.php(29): App\Models\GsbModel->get_id_ficheFrais(null, '2025', '11')
+ 6 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Gererfrais->__construct()
+ 7 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+CRITICAL - 2025-11-03 13:22:18 --> [Caused by] mysqli_sql_exception: Unknown column 'fichefrais.idUtilisateur' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `fichefrais`.`idFiche`, `fichefrais`.`idEtat`
+FROM `fichefrais`
+WHERE `fichefrais`.`idUtilisateur` IS NULL
+AND `fichefrais`.`annee` = \'2025\'
+AND `fichefrais`.`mois` = \'11\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `fichefrais`.`idFiche`, `fichefrais`.`idEtat`
+FROM `fichefrais`
+WHERE `fichefrais`.`idUtilisateur` IS NULL
+AND `fichefrais`.`annee` = \'2025\'
+AND `fichefrais`.`mois` = \'11\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `fichefrais`.`idFiche`, `fichefrais`.`idEtat`
+FROM `fichefrais`
+WHERE `fichefrais`.`idUtilisateur` IS NULL
+AND `fichefrais`.`annee` = \'2025\'
+AND `fichefrais`.`mois` = \'11\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `fichefrais`.`idFiche`, `fichefrais`.`idEtat`
+FROM `fichefrais`
+WHERE `fichefrais`.`idUtilisateur` IS NULL
+AND `fichefrais`.`annee` = :fichefrais.annee:
+AND `fichefrais`.`mois` = :fichefrais.mois:', [...], false)
+ 5 APPPATH\Models\GsbModel.php(50): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Gererfrais.php(29): App\Models\GsbModel->get_id_ficheFrais(null, '2025', '11')
+ 7 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Gererfrais->__construct()
+ 8 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+DEBUG - 2025-11-03 13:25:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-03 13:25:40 --> TypeError: App\Libraries\Gsb_lib::get_annee_from_anneemois(): Argument #1 ($annee_mois) must be of type string, null given, called in Z:\BTS2\AP\GSBFrais-V2 - Copie\app\Models\GsbModel.php on line 124
+[Method: GET, Route: gererfrais]
+in APPPATH\Libraries\Gsb_lib.php on line 29.
+ 1 APPPATH\Models\GsbModel.php(124): App\Libraries\Gsb_lib->get_annee_from_anneemois(null)
+ 2 APPPATH\Controllers\Gererfrais.php(45): App\Models\GsbModel->cree_nouvelles_lignes_frais(null, '2025', '11')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Gererfrais->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gererfrais))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+DEBUG - 2025-11-03 13:41:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-03 13:42:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-03 13:42:13 --> TypeError: App\Libraries\Gsb_lib::get_annee_from_anneemois(): Argument #1 ($annee_mois) must be of type string, null given, called in Z:\BTS2\AP\GSBFrais-V2 - Copie\app\Models\GsbModel.php on line 124
+[Method: GET, Route: gererfrais]
+in APPPATH\Libraries\Gsb_lib.php on line 29.
+ 1 APPPATH\Models\GsbModel.php(124): App\Libraries\Gsb_lib->get_annee_from_anneemois(null)
+ 2 APPPATH\Controllers\Gererfrais.php(45): App\Models\GsbModel->cree_nouvelles_lignes_frais(null, '2025', '11')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Gererfrais->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gererfrais))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+DEBUG - 2025-11-03 13:44:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-03 13:45:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-03 13:45:37 --> TypeError: App\Libraries\Gsb_lib::get_annee_from_anneemois(): Argument #1 ($annee_mois) must be of type string, null given, called in Z:\BTS2\AP\GSBFrais-V2 - Copie\app\Models\GsbModel.php on line 124
+[Method: GET, Route: gererfrais]
+in APPPATH\Libraries\Gsb_lib.php on line 29.
+ 1 APPPATH\Models\GsbModel.php(124): App\Libraries\Gsb_lib->get_annee_from_anneemois(null)
+ 2 APPPATH\Controllers\Gererfrais.php(45): App\Models\GsbModel->cree_nouvelles_lignes_frais(null, '2025', '11')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Gererfrais->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gererfrais))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')

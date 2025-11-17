@@ -1,0 +1,344 @@
+DEBUG - 2025-11-04 13:49:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 13:49:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 13:49:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 13:50:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 13:52:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-04 13:52:33 --> TypeError: App\Libraries\Gsb_lib::get_annee_from_anneemois(): Argument #1 ($annee_mois) must be of type string, null given, called in Z:\BTS2\AP\GSBFrais-V2 - Copie\app\Models\GsbModel.php on line 124
+[Method: GET, Route: gererfrais]
+in APPPATH\Libraries\Gsb_lib.php on line 29.
+ 1 APPPATH\Models\GsbModel.php(124): App\Libraries\Gsb_lib->get_annee_from_anneemois(null)
+ 2 APPPATH\Controllers\Gererfrais.php(45): App\Models\GsbModel->cree_nouvelles_lignes_frais(null, '2025', '11')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Gererfrais->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gererfrais))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+DEBUG - 2025-11-04 14:02:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-04 14:02:22 --> TypeError: App\Libraries\Gsb_lib::get_annee_from_anneemois(): Argument #1 ($annee_mois) must be of type string, null given, called in Z:\BTS2\AP\GSBFrais-V2 - Copie\app\Models\GsbModel.php on line 124
+[Method: GET, Route: gererfrais]
+in APPPATH\Libraries\Gsb_lib.php on line 29.
+ 1 APPPATH\Models\GsbModel.php(124): App\Libraries\Gsb_lib->get_annee_from_anneemois(null)
+ 2 APPPATH\Controllers\Gererfrais.php(45): App\Models\GsbModel->cree_nouvelles_lignes_frais('a000', '2025', '11')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Gererfrais->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gererfrais))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+DEBUG - 2025-11-04 14:02:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 14:02:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-04 14:02:26 --> TypeError: App\Libraries\Gsb_lib::get_annee_from_anneemois(): Argument #1 ($annee_mois) must be of type string, null given, called in Z:\BTS2\AP\GSBFrais-V2 - Copie\app\Models\GsbModel.php on line 124
+[Method: GET, Route: gererfrais]
+in APPPATH\Libraries\Gsb_lib.php on line 29.
+ 1 APPPATH\Models\GsbModel.php(124): App\Libraries\Gsb_lib->get_annee_from_anneemois(null)
+ 2 APPPATH\Controllers\Gererfrais.php(45): App\Models\GsbModel->cree_nouvelles_lignes_frais('a000', '2025', '11')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Gererfrais->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gererfrais))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+DEBUG - 2025-11-04 14:02:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 14:02:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 14:02:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-04 14:02:57 --> TypeError: App\Libraries\Gsb_lib::get_annee_from_anneemois(): Argument #1 ($annee_mois) must be of type string, null given, called in Z:\BTS2\AP\GSBFrais-V2 - Copie\app\Models\GsbModel.php on line 124
+[Method: GET, Route: gererfrais]
+in APPPATH\Libraries\Gsb_lib.php on line 29.
+ 1 APPPATH\Models\GsbModel.php(124): App\Libraries\Gsb_lib->get_annee_from_anneemois(null)
+ 2 APPPATH\Controllers\Gererfrais.php(45): App\Models\GsbModel->cree_nouvelles_lignes_frais('a000', '2025', '11')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Gererfrais->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gererfrais))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+DEBUG - 2025-11-04 14:03:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 14:03:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-04 14:03:58 --> TypeError: App\Libraries\Gsb_lib::get_annee_from_anneemois(): Argument #1 ($annee_mois) must be of type string, null given, called in Z:\BTS2\AP\GSBFrais-V2 - Copie\app\Models\GsbModel.php on line 124
+[Method: GET, Route: gererfrais]
+in APPPATH\Libraries\Gsb_lib.php on line 29.
+ 1 APPPATH\Models\GsbModel.php(124): App\Libraries\Gsb_lib->get_annee_from_anneemois(null)
+ 2 APPPATH\Controllers\Gererfrais.php(45): App\Models\GsbModel->cree_nouvelles_lignes_frais('a000', '2025', '11')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Gererfrais->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gererfrais))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+DEBUG - 2025-11-04 14:04:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 14:04:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 14:04:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-04 14:04:19 --> TypeError: App\Libraries\Gsb_lib::get_annee_from_anneemois(): Argument #1 ($annee_mois) must be of type string, null given, called in Z:\BTS2\AP\GSBFrais-V2 - Copie\app\Models\GsbModel.php on line 124
+[Method: GET, Route: gererfrais]
+in APPPATH\Libraries\Gsb_lib.php on line 29.
+ 1 APPPATH\Models\GsbModel.php(124): App\Libraries\Gsb_lib->get_annee_from_anneemois(null)
+ 2 APPPATH\Controllers\Gererfrais.php(45): App\Models\GsbModel->cree_nouvelles_lignes_frais('a000', '2025', '11')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Gererfrais->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gererfrais))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+DEBUG - 2025-11-04 14:07:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 14:07:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 14:07:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 14:07:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 14:08:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 14:08:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 14:08:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 14:08:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 14:08:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 14:08:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 14:08:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-04 14:08:15 --> TypeError: App\Libraries\Gsb_lib::get_annee_from_anneemois(): Argument #1 ($annee_mois) must be of type string, null given, called in Z:\BTS2\AP\GSBFrais-V2 - Copie\app\Models\GsbModel.php on line 124
+[Method: GET, Route: gererfrais]
+in APPPATH\Libraries\Gsb_lib.php on line 29.
+ 1 APPPATH\Models\GsbModel.php(124): App\Libraries\Gsb_lib->get_annee_from_anneemois(null)
+ 2 APPPATH\Controllers\Gererfrais.php(45): App\Models\GsbModel->cree_nouvelles_lignes_frais('a000', '2025', '11')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Gererfrais->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gererfrais))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+DEBUG - 2025-11-04 14:08:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 14:08:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 14:08:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 14:08:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 14:43:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 14:43:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 14:43:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 14:43:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 14:44:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 14:45:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-04 14:45:21 --> TypeError: App\Libraries\Gsb_lib::get_annee_from_anneemois(): Argument #1 ($annee_mois) must be of type string, null given, called in Z:\BTS2\AP\GSBFrais-V2 - Copie\app\Models\GsbModel.php on line 125
+[Method: GET, Route: gererfrais]
+in APPPATH\Libraries\Gsb_lib.php on line 29.
+ 1 APPPATH\Models\GsbModel.php(125): App\Libraries\Gsb_lib->get_annee_from_anneemois(null)
+ 2 APPPATH\Controllers\Gererfrais.php(45): App\Models\GsbModel->cree_nouvelles_lignes_frais('a001', '2025', '11')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Gererfrais->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gererfrais))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+DEBUG - 2025-11-04 14:45:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 14:45:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-04 14:45:23 --> TypeError: App\Libraries\Gsb_lib::get_annee_from_anneemois(): Argument #1 ($annee_mois) must be of type string, null given, called in Z:\BTS2\AP\GSBFrais-V2 - Copie\app\Models\GsbModel.php on line 125
+[Method: GET, Route: gererfrais]
+in APPPATH\Libraries\Gsb_lib.php on line 29.
+ 1 APPPATH\Models\GsbModel.php(125): App\Libraries\Gsb_lib->get_annee_from_anneemois(null)
+ 2 APPPATH\Controllers\Gererfrais.php(45): App\Models\GsbModel->cree_nouvelles_lignes_frais('a001', '2025', '11')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Gererfrais->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gererfrais))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+DEBUG - 2025-11-04 14:45:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 14:45:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-04 14:45:24 --> TypeError: App\Libraries\Gsb_lib::get_annee_from_anneemois(): Argument #1 ($annee_mois) must be of type string, null given, called in Z:\BTS2\AP\GSBFrais-V2 - Copie\app\Models\GsbModel.php on line 125
+[Method: GET, Route: gererfrais]
+in APPPATH\Libraries\Gsb_lib.php on line 29.
+ 1 APPPATH\Models\GsbModel.php(125): App\Libraries\Gsb_lib->get_annee_from_anneemois(null)
+ 2 APPPATH\Controllers\Gererfrais.php(45): App\Models\GsbModel->cree_nouvelles_lignes_frais('a001', '2025', '11')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Gererfrais->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gererfrais))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+DEBUG - 2025-11-04 14:45:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 14:45:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 14:45:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-04 14:45:24 --> TypeError: App\Libraries\Gsb_lib::get_annee_from_anneemois(): Argument #1 ($annee_mois) must be of type string, null given, called in Z:\BTS2\AP\GSBFrais-V2 - Copie\app\Models\GsbModel.php on line 125
+[Method: GET, Route: gererfrais]
+in APPPATH\Libraries\Gsb_lib.php on line 29.
+ 1 APPPATH\Models\GsbModel.php(125): App\Libraries\Gsb_lib->get_annee_from_anneemois(null)
+ 2 APPPATH\Controllers\Gererfrais.php(45): App\Models\GsbModel->cree_nouvelles_lignes_frais('a001', '2025', '11')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Gererfrais->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gererfrais))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+DEBUG - 2025-11-04 14:45:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 14:45:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-04 14:45:25 --> TypeError: App\Libraries\Gsb_lib::get_annee_from_anneemois(): Argument #1 ($annee_mois) must be of type string, null given, called in Z:\BTS2\AP\GSBFrais-V2 - Copie\app\Models\GsbModel.php on line 125
+[Method: GET, Route: gererfrais]
+in APPPATH\Libraries\Gsb_lib.php on line 29.
+ 1 APPPATH\Models\GsbModel.php(125): App\Libraries\Gsb_lib->get_annee_from_anneemois(null)
+ 2 APPPATH\Controllers\Gererfrais.php(45): App\Models\GsbModel->cree_nouvelles_lignes_frais('a001', '2025', '11')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Gererfrais->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gererfrais))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+DEBUG - 2025-11-04 14:58:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 15:02:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-04 15:02:41 --> ParseError: Unclosed '{' on line 33
+[Method: GET, Route: accueil]
+in APPPATH\Views\sommaire.php on line 45.
+ 1 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('sommaire', [], true)
+ 3 APPPATH\Controllers\Accueil.php(23): view('sommaire')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accueil->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accueil))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+DEBUG - 2025-11-04 15:03:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 15:04:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 15:04:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 15:04:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 15:04:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 15:04:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 15:04:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 15:04:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 15:04:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-04 15:04:48 --> TypeError: App\Libraries\Gsb_lib::get_annee_from_anneemois(): Argument #1 ($annee_mois) must be of type string, null given, called in Z:\BTS2\AP\GSBFrais-V2 - Copie\app\Models\GsbModel.php on line 125
+[Method: GET, Route: gererfrais]
+in APPPATH\Libraries\Gsb_lib.php on line 29.
+ 1 APPPATH\Models\GsbModel.php(125): App\Libraries\Gsb_lib->get_annee_from_anneemois(null)
+ 2 APPPATH\Controllers\Gererfrais.php(45): App\Models\GsbModel->cree_nouvelles_lignes_frais('a001', '2025', '11')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Gererfrais->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gererfrais))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+CRITICAL - 2025-11-04 15:09:15 --> ParseError: syntax error, unexpected end of file
+[Method: GET, Route: connexion/deconnexion]
+in APPPATH\Config\Routes.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+CRITICAL - 2025-11-04 15:09:22 --> ParseError: syntax error, unexpected end of file
+[Method: GET, Route: connexion/deconnexion]
+in APPPATH\Config\Routes.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+DEBUG - 2025-11-04 15:09:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 15:09:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 15:09:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 15:09:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 15:09:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-04 15:09:46 --> TypeError: App\Libraries\Gsb_lib::get_annee_from_anneemois(): Argument #1 ($annee_mois) must be of type string, null given, called in Z:\BTS2\AP\GSBFrais-V2 - Copie\app\Models\GsbModel.php on line 125
+[Method: GET, Route: gererfrais]
+in APPPATH\Libraries\Gsb_lib.php on line 29.
+ 1 APPPATH\Models\GsbModel.php(125): App\Libraries\Gsb_lib->get_annee_from_anneemois(null)
+ 2 APPPATH\Controllers\Gererfrais.php(45): App\Models\GsbModel->cree_nouvelles_lignes_frais('a000', '2025', '11')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Gererfrais->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gererfrais))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+DEBUG - 2025-11-04 15:09:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 15:09:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 15:18:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 15:18:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 15:18:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 15:18:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 15:19:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 15:19:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-04 15:19:35 --> ErrorException: Undefined variable $titre
+[Method: GET, Route: validerFicheFrais]
+in APPPATH\Views\structures\contenu_entete.php on line 2.
+ 1 APPPATH\Views\structures\contenu_entete.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titre', 'Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\app\\Views\\structures\\contenu_entete.php', 2)
+ 2 SYSTEMPATH\View\View.php(226): include('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\app\\Views\\structures\\contenu_entete.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('structures/contenu_entete', [], true)
+ 5 APPPATH\Controllers\ValiderFicheFrais.php(23): view('structures/contenu_entete')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ValiderFicheFrais->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValiderFicheFrais))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+DEBUG - 2025-11-04 15:20:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-04 15:20:09 --> ErrorException: Undefined variable $titre
+[Method: GET, Route: suiviePaiementFicheFrais]
+in APPPATH\Views\structures\contenu_entete.php on line 2.
+ 1 APPPATH\Views\structures\contenu_entete.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titre', 'Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\app\\Views\\structures\\contenu_entete.php', 2)
+ 2 SYSTEMPATH\View\View.php(226): include('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\app\\Views\\structures\\contenu_entete.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('structures/contenu_entete', [], true)
+ 5 APPPATH\Controllers\SuiviePaiementFicheFrais.php(23): view('structures/contenu_entete')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SuiviePaiementFicheFrais->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuiviePaiementFicheFrais))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+DEBUG - 2025-11-04 15:22:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 15:22:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 15:22:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 15:23:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 15:23:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 15:23:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 15:23:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 15:23:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 15:23:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 15:23:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 15:24:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 15:24:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 15:24:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 15:24:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 15:24:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 15:24:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 15:24:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 15:24:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 15:25:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-04 15:25:02 --> TypeError: App\Libraries\Gsb_lib::get_annee_from_anneemois(): Argument #1 ($annee_mois) must be of type string, null given, called in Z:\BTS2\AP\GSBFrais-V2 - Copie\app\Models\GsbModel.php on line 125
+[Method: GET, Route: gererfrais]
+in APPPATH\Libraries\Gsb_lib.php on line 29.
+ 1 APPPATH\Models\GsbModel.php(125): App\Libraries\Gsb_lib->get_annee_from_anneemois(null)
+ 2 APPPATH\Controllers\Gererfrais.php(45): App\Models\GsbModel->cree_nouvelles_lignes_frais('a000', '2025', '11')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Gererfrais->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gererfrais))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+DEBUG - 2025-11-04 15:25:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 15:25:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 15:25:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 15:25:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 15:25:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 15:25:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 15:25:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 15:25:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 15:25:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 15:25:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-04 15:25:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

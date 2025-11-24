@@ -164,12 +164,14 @@ class GsbModel extends Model
     }
 
     /** Met à jour l'état d'une fiche */
-    public function maj_etat_fiche_frais($idFiche, $etat)
+    public function maj_etat_fiche_frais($idFiche)
     {
-        $this->db->table('fichefrais')->update(
-            ['idEtat' => $etat, 'dateModif' => date('Y-m-d')],
-            ['idFiche' => $idFiche]
-        );
+        // $this->db->table('fichefrais')->update(
+        //     ['idEtat' => $etat, 'dateModif' => date('Y-m-d')],
+        //     ['idFiche' => $idFiche]
+        // );
+        $query = $this->db->query("CALL procedure_mmise_a_jour_frais_forfait(?)", [$idFiche]);
+        return $query->getResult();
     }
 
     /** Met à jour les frais forfait */

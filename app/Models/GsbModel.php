@@ -208,6 +208,12 @@ class GsbModel extends Model
         ]);
         return $resultat;
     }
+
+    public function supprimer_frais_hors_forfait2($idFrais)
+    {
+        return $this->db->table('lignefraishorsforfait')->delete(['idLigneFHF' => $idFrais]);
+    }
 }
 
+//test
 //test

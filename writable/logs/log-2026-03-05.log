@@ -1,0 +1,192 @@
+DEBUG - 2026-03-05 07:58:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-03-05 07:58:41 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'gsb_frais2025' in Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'myroot', Object(SensitiveParameterValue), 'gsb_frais2025', 3306, '', 0)
+#1 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `idUtili...', Array, false)
+#4 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\app\Models\GsbModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+#5 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\app\Controllers\Connexion.php(52): App\Models\GsbModel->get_infos_visiteur('testvisiteur', 'test$')
+#6 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+#7 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+#8 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\rewrite.php(44): require_once('Z:\\BTS 2\\INFORM...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'gsb_frais2025' in Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `idUtili...', Array, false)
+#3 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\app\Models\GsbModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+#4 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\app\Controllers\Connexion.php(52): App\Models\GsbModel->get_infos_visiteur('testvisiteur', 'test$')
+#5 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+#6 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+#7 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\rewrite.php(44): require_once('Z:\\BTS 2\\INFORM...')
+#12 {main}
+CRITICAL - 2026-03-05 07:58:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'gsb_frais2025'
+[Method: POST, Route: connexion/valider]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `idUtilisateur`, `nom`, `prenom`, `login`, `mdp`, `idRole`, `libelle`
+FROM `recup_info_util`
+WHERE `login` = :login:
+AND `mdp` = :mdp:', [...], false)
+ 3 APPPATH\Models\GsbModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Connexion.php(52): App\Models\GsbModel->get_infos_visiteur('testvisiteur', 'test$')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS 2\\INFORMATIQUE\\AP\\GSBFrais-V2 - Copie - Copie\\public\\index.php')
+ERROR - 2026-03-05 07:58:42 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'gsb_frais2025' in Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'myroot', Object(SensitiveParameterValue), 'gsb_frais2025', 3306, '', 0)
+#1 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `idUtili...', Array, false)
+#4 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\app\Models\GsbModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+#5 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\app\Controllers\Connexion.php(52): App\Models\GsbModel->get_infos_visiteur('testvisiteur', 'test')
+#6 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+#7 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+#8 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\rewrite.php(44): require_once('Z:\\BTS 2\\INFORM...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'gsb_frais2025' in Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `idUtili...', Array, false)
+#3 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\app\Models\GsbModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+#4 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\app\Controllers\Connexion.php(52): App\Models\GsbModel->get_infos_visiteur('testvisiteur', 'test')
+#5 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+#6 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+#7 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\rewrite.php(44): require_once('Z:\\BTS 2\\INFORM...')
+#12 {main}
+CRITICAL - 2026-03-05 07:58:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'gsb_frais2025'
+[Method: POST, Route: connexion/valider]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `idUtilisateur`, `nom`, `prenom`, `login`, `mdp`, `idRole`, `libelle`
+FROM `recup_info_util`
+WHERE `login` = :login:
+AND `mdp` = :mdp:', [...], false)
+ 3 APPPATH\Models\GsbModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Connexion.php(52): App\Models\GsbModel->get_infos_visiteur('testvisiteur', 'test')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS 2\\INFORMATIQUE\\AP\\GSBFrais-V2 - Copie - Copie\\public\\index.php')
+ERROR - 2026-03-05 08:00:13 --> Error connecting to the database: ErrorException: mysqli::real_connect(): php_network_getaddresses: getaddrinfo for http failed: Hï¿½te inconnu.  in Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', 'Z:\\BTS 2\\INFORM...', 201)
+#1 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('http://10.29.4....', 'myroot', Object(SensitiveParameterValue), 'gsb_frais2025', 3306, '', 0)
+#2 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#4 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `idUtili...', Array, false)
+#5 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\app\Models\GsbModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+#6 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\app\Controllers\Connexion.php(52): App\Models\GsbModel->get_infos_visiteur('testvisiteur', 'test')
+#7 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+#8 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+#9 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\rewrite.php(44): require_once('Z:\\BTS 2\\INFORM...')
+#14 {main}
+
+Next mysqli_sql_exception: php_network_getaddresses: getaddrinfo for http failed: Hôte inconnu.  in Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('http://10.29.4....', 'myroot', Object(SensitiveParameterValue), 'gsb_frais2025', 3306, '', 0)
+#1 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `idUtili...', Array, false)
+#4 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\app\Models\GsbModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+#5 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\app\Controllers\Connexion.php(52): App\Models\GsbModel->get_infos_visiteur('testvisiteur', 'test')
+#6 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+#7 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+#8 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\rewrite.php(44): require_once('Z:\\BTS 2\\INFORM...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: php_network_getaddresses: getaddrinfo for http failed: Hôte inconnu.  in Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `idUtili...', Array, false)
+#3 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\app\Models\GsbModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+#4 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\app\Controllers\Connexion.php(52): App\Models\GsbModel->get_infos_visiteur('testvisiteur', 'test')
+#5 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+#6 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+#7 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\rewrite.php(44): require_once('Z:\\BTS 2\\INFORM...')
+#12 {main}
+CRITICAL - 2026-03-05 08:00:13 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: php_network_getaddresses: getaddrinfo for http failed: Hôte inconnu. 
+[Method: POST, Route: connexion/valider]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `idUtilisateur`, `nom`, `prenom`, `login`, `mdp`, `idRole`, `libelle`
+FROM `recup_info_util`
+WHERE `login` = :login:
+AND `mdp` = :mdp:', [...], false)
+ 3 APPPATH\Models\GsbModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Connexion.php(52): App\Models\GsbModel->get_infos_visiteur('testvisiteur', 'test')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS 2\\INFORMATIQUE\\AP\\GSBFrais-V2 - Copie - Copie\\public\\index.php')
+DEBUG - 2026-03-05 08:00:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-05 08:00:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-05 08:00:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-05 08:00:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-05 08:00:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-05 08:00:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-05 08:02:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-05 08:02:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-05 08:02:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-05 08:03:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-05 08:03:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-05 08:03:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-05 08:04:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-05 08:05:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-05 08:06:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-05 08:26:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-05 08:26:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-05 08:26:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-05 08:29:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-05 08:29:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-05 08:30:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-05 08:30:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-05 08:30:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

@@ -1,0 +1,1 @@
+__ci_last_regenerate|i:1759658679;_ci_previous_url|s:32:"http://localhost:8080/index.php/";_ci_old_input|a:2:{s:3:"get";a:0:{}s:4:"post";a:3:{s:8:"txtLogin";s:3:"fds";s:6:"pwdMdp";s:3:"fds";s:10:"btnValider";s:7:"Valider";}}__ci_vars|a:2:{s:13:"_ci_old_input";s:3:"old";s:7:"erreurs";s:3:"old";}erreurs|a:1:{s:5:"login";s:31:"Login ou mot de passe incorrect";}

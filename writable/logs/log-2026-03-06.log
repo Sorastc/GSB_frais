@@ -1,0 +1,331 @@
+DEBUG - 2026-03-06 09:34:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-03-06 09:34:55 --> mysqli_sql_exception: Unknown column 'idVisiteur' in 'where clause' in Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `DateMod...', 0)
+#1 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `DateMod...')
+#2 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `DateMod...')
+#3 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `DateMod...', Array, false)
+#4 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\app\Models\GsbModel.php(123): CodeIgniter\Database\BaseBuilder->get()
+#5 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\app\Controllers\Connexion.php(52): App\Models\GsbModel->get_info_mdp(Array)
+#6 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+#7 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+#8 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\rewrite.php(44): require_once('Z:\\BTS 2\\INFORM...')
+#13 {main}
+CRITICAL - 2026-03-06 09:34:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'idVisiteur' in 'where clause'
+[Method: POST, Route: connexion/valider]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `DateModif`
+FROM `utilisateur`
+WHERE `idVisiteur` = :idVisiteur:', [...], false)
+ 2 APPPATH\Models\GsbModel.php(123): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Connexion.php(52): App\Models\GsbModel->get_info_mdp([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS 2\\INFORMATIQUE\\AP\\GSBFrais-V2 - Copie - Copie\\public\\index.php')
+CRITICAL - 2026-03-06 09:34:56 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'idVisiteur' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `DateModif`
+FROM `utilisateur`
+WHERE `idVisiteur` = (\'a001\',\'test\',\'comptable\',\'testcomptable\',\'test\',\'C\',\'comptable\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `DateModif`
+FROM `utilisateur`
+WHERE `idVisiteur` = (\'a001\',\'test\',\'comptable\',\'testcomptable\',\'test\',\'C\',\'comptable\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `DateModif`
+FROM `utilisateur`
+WHERE `idVisiteur` = :idVisiteur:', [...], false)
+ 4 APPPATH\Models\GsbModel.php(123): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Connexion.php(52): App\Models\GsbModel->get_info_mdp([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS 2\\INFORMATIQUE\\AP\\GSBFrais-V2 - Copie - Copie\\public\\index.php')
+CRITICAL - 2026-03-06 09:34:56 --> [Caused by] mysqli_sql_exception: Unknown column 'idVisiteur' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `DateModif`
+FROM `utilisateur`
+WHERE `idVisiteur` = (\'a001\',\'test\',\'comptable\',\'testcomptable\',\'test\',\'C\',\'comptable\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `DateModif`
+FROM `utilisateur`
+WHERE `idVisiteur` = (\'a001\',\'test\',\'comptable\',\'testcomptable\',\'test\',\'C\',\'comptable\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `DateModif`
+FROM `utilisateur`
+WHERE `idVisiteur` = (\'a001\',\'test\',\'comptable\',\'testcomptable\',\'test\',\'C\',\'comptable\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `DateModif`
+FROM `utilisateur`
+WHERE `idVisiteur` = :idVisiteur:', [...], false)
+ 5 APPPATH\Models\GsbModel.php(123): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Connexion.php(52): App\Models\GsbModel->get_info_mdp([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS 2\\INFORMATIQUE\\AP\\GSBFrais-V2 - Copie - Copie\\public\\index.php')
+ERROR - 2026-03-06 09:36:29 --> mysqli_sql_exception: Illegal parameter data types varchar and row for operation '=' in Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `DateMod...', 0)
+#1 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `DateMod...')
+#2 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `DateMod...')
+#3 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `DateMod...', Array, false)
+#4 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\app\Models\GsbModel.php(123): CodeIgniter\Database\BaseBuilder->get()
+#5 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\app\Controllers\Connexion.php(52): App\Models\GsbModel->get_info_mdp(Array)
+#6 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+#7 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+#8 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\rewrite.php(44): require_once('Z:\\BTS 2\\INFORM...')
+#13 {main}
+CRITICAL - 2026-03-06 09:36:29 --> CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types varchar and row for operation '='
+[Method: POST, Route: connexion/valider]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `DateModif`
+FROM `utilisateur`
+WHERE `idUtilisateur` = :idUtilisateur:', [...], false)
+ 2 APPPATH\Models\GsbModel.php(123): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Connexion.php(52): App\Models\GsbModel->get_info_mdp([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS 2\\INFORMATIQUE\\AP\\GSBFrais-V2 - Copie - Copie\\public\\index.php')
+CRITICAL - 2026-03-06 09:36:29 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types varchar and row for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `DateModif`
+FROM `utilisateur`
+WHERE `idUtilisateur` = (\'a001\',\'test\',\'comptable\',\'testcomptable\',\'test\',\'C\',\'comptable\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `DateModif`
+FROM `utilisateur`
+WHERE `idUtilisateur` = (\'a001\',\'test\',\'comptable\',\'testcomptable\',\'test\',\'C\',\'comptable\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `DateModif`
+FROM `utilisateur`
+WHERE `idUtilisateur` = :idUtilisateur:', [...], false)
+ 4 APPPATH\Models\GsbModel.php(123): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Connexion.php(52): App\Models\GsbModel->get_info_mdp([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS 2\\INFORMATIQUE\\AP\\GSBFrais-V2 - Copie - Copie\\public\\index.php')
+CRITICAL - 2026-03-06 09:36:29 --> [Caused by] mysqli_sql_exception: Illegal parameter data types varchar and row for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `DateModif`
+FROM `utilisateur`
+WHERE `idUtilisateur` = (\'a001\',\'test\',\'comptable\',\'testcomptable\',\'test\',\'C\',\'comptable\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `DateModif`
+FROM `utilisateur`
+WHERE `idUtilisateur` = (\'a001\',\'test\',\'comptable\',\'testcomptable\',\'test\',\'C\',\'comptable\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `DateModif`
+FROM `utilisateur`
+WHERE `idUtilisateur` = (\'a001\',\'test\',\'comptable\',\'testcomptable\',\'test\',\'C\',\'comptable\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `DateModif`
+FROM `utilisateur`
+WHERE `idUtilisateur` = :idUtilisateur:', [...], false)
+ 5 APPPATH\Models\GsbModel.php(123): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Connexion.php(52): App\Models\GsbModel->get_info_mdp([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS 2\\INFORMATIQUE\\AP\\GSBFrais-V2 - Copie - Copie\\public\\index.php')
+ERROR - 2026-03-06 09:36:33 --> mysqli_sql_exception: Illegal parameter data types varchar and row for operation '=' in Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `DateMod...', 0)
+#1 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `DateMod...')
+#2 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `DateMod...')
+#3 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `DateMod...', Array, false)
+#4 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\app\Models\GsbModel.php(123): CodeIgniter\Database\BaseBuilder->get()
+#5 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\app\Controllers\Connexion.php(52): App\Models\GsbModel->get_info_mdp(Array)
+#6 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+#7 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+#8 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\rewrite.php(44): require_once('Z:\\BTS 2\\INFORM...')
+#13 {main}
+CRITICAL - 2026-03-06 09:36:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types varchar and row for operation '='
+[Method: POST, Route: connexion/valider]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `DateModif`
+FROM `utilisateur`
+WHERE `idUtilisateur` = :idUtilisateur:', [...], false)
+ 2 APPPATH\Models\GsbModel.php(123): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Connexion.php(52): App\Models\GsbModel->get_info_mdp([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS 2\\INFORMATIQUE\\AP\\GSBFrais-V2 - Copie - Copie\\public\\index.php')
+CRITICAL - 2026-03-06 09:36:33 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types varchar and row for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `DateModif`
+FROM `utilisateur`
+WHERE `idUtilisateur` = (\'a001\',\'test\',\'comptable\',\'testcomptable\',\'test\',\'C\',\'comptable\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `DateModif`
+FROM `utilisateur`
+WHERE `idUtilisateur` = (\'a001\',\'test\',\'comptable\',\'testcomptable\',\'test\',\'C\',\'comptable\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `DateModif`
+FROM `utilisateur`
+WHERE `idUtilisateur` = :idUtilisateur:', [...], false)
+ 4 APPPATH\Models\GsbModel.php(123): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Connexion.php(52): App\Models\GsbModel->get_info_mdp([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS 2\\INFORMATIQUE\\AP\\GSBFrais-V2 - Copie - Copie\\public\\index.php')
+CRITICAL - 2026-03-06 09:36:33 --> [Caused by] mysqli_sql_exception: Illegal parameter data types varchar and row for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `DateModif`
+FROM `utilisateur`
+WHERE `idUtilisateur` = (\'a001\',\'test\',\'comptable\',\'testcomptable\',\'test\',\'C\',\'comptable\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `DateModif`
+FROM `utilisateur`
+WHERE `idUtilisateur` = (\'a001\',\'test\',\'comptable\',\'testcomptable\',\'test\',\'C\',\'comptable\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `DateModif`
+FROM `utilisateur`
+WHERE `idUtilisateur` = (\'a001\',\'test\',\'comptable\',\'testcomptable\',\'test\',\'C\',\'comptable\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `DateModif`
+FROM `utilisateur`
+WHERE `idUtilisateur` = :idUtilisateur:', [...], false)
+ 5 APPPATH\Models\GsbModel.php(123): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Connexion.php(52): App\Models\GsbModel->get_info_mdp([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS 2\\INFORMATIQUE\\AP\\GSBFrais-V2 - Copie - Copie\\public\\index.php')
+ERROR - 2026-03-06 09:38:22 --> mysqli_sql_exception: Illegal parameter data types varchar and row for operation '=' in Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `DateMod...', 0)
+#1 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `DateMod...')
+#2 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `DateMod...')
+#3 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `DateMod...', Array, false)
+#4 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\app\Models\GsbModel.php(123): CodeIgniter\Database\BaseBuilder->get()
+#5 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\app\Controllers\Connexion.php(52): App\Models\GsbModel->get_info_mdp(Array)
+#6 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+#7 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+#8 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 Z:\BTS 2\INFORMATIQUE\AP\GSBFrais-V2 - Copie - Copie\system\rewrite.php(44): require_once('Z:\\BTS 2\\INFORM...')
+#13 {main}
+CRITICAL - 2026-03-06 09:38:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types varchar and row for operation '='
+[Method: POST, Route: connexion/valider]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `DateModif`
+FROM `utilisateur`
+WHERE `idUtilisateur` = :idUtilisateur:', [...], false)
+ 2 APPPATH\Models\GsbModel.php(123): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Connexion.php(52): App\Models\GsbModel->get_info_mdp([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS 2\\INFORMATIQUE\\AP\\GSBFrais-V2 - Copie - Copie\\public\\index.php')
+CRITICAL - 2026-03-06 09:38:22 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types varchar and row for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `DateModif`
+FROM `utilisateur`
+WHERE `idUtilisateur` = (\'a001\',\'test\',\'comptable\',\'testcomptable\',\'test\',\'C\',\'comptable\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `DateModif`
+FROM `utilisateur`
+WHERE `idUtilisateur` = (\'a001\',\'test\',\'comptable\',\'testcomptable\',\'test\',\'C\',\'comptable\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `DateModif`
+FROM `utilisateur`
+WHERE `idUtilisateur` = :idUtilisateur:', [...], false)
+ 4 APPPATH\Models\GsbModel.php(123): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Connexion.php(52): App\Models\GsbModel->get_info_mdp([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS 2\\INFORMATIQUE\\AP\\GSBFrais-V2 - Copie - Copie\\public\\index.php')
+CRITICAL - 2026-03-06 09:38:22 --> [Caused by] mysqli_sql_exception: Illegal parameter data types varchar and row for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `DateModif`
+FROM `utilisateur`
+WHERE `idUtilisateur` = (\'a001\',\'test\',\'comptable\',\'testcomptable\',\'test\',\'C\',\'comptable\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `DateModif`
+FROM `utilisateur`
+WHERE `idUtilisateur` = (\'a001\',\'test\',\'comptable\',\'testcomptable\',\'test\',\'C\',\'comptable\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `DateModif`
+FROM `utilisateur`
+WHERE `idUtilisateur` = (\'a001\',\'test\',\'comptable\',\'testcomptable\',\'test\',\'C\',\'comptable\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `DateModif`
+FROM `utilisateur`
+WHERE `idUtilisateur` = :idUtilisateur:', [...], false)
+ 5 APPPATH\Models\GsbModel.php(123): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Connexion.php(52): App\Models\GsbModel->get_info_mdp([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS 2\\INFORMATIQUE\\AP\\GSBFrais-V2 - Copie - Copie\\public\\index.php')
+DEBUG - 2026-03-06 09:40:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-06 09:41:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-06 09:42:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-06 09:42:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-06 09:42:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-06 09:43:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-06 09:45:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-03-06 09:45:42 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "page_entete.php"
+[Method: GET, Route: modifMDP]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('page_entete.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('page_entete', [], true)
+ 3 APPPATH\Controllers\ChangementMDP.php(14): view('page_entete')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ChangementMDP->ChangementMDP()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChangementMDP))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS 2\\INFORMATIQUE\\AP\\GSBFrais-V2 - Copie - Copie\\public\\index.php')
+CRITICAL - 2026-03-06 09:47:01 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "page_entete.php"
+[Method: GET, Route: modifMDP]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('page_entete.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('page_entete', [], true)
+ 3 APPPATH\Controllers\ChangementMDP.php(14): view('page_entete')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ChangementMDP->ChangementMDP()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChangementMDP))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS 2\\INFORMATIQUE\\AP\\GSBFrais-V2 - Copie - Copie\\public\\index.php')
+DEBUG - 2026-03-06 09:47:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

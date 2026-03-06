@@ -1,0 +1,290 @@
+DEBUG - 2025-10-17 08:11:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-17 08:13:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-17 08:13:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-17 08:14:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-17 08:14:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-17 08:15:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-17 08:15:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-17 08:15:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-17 09:12:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-17 09:13:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-17 09:15:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-17 09:16:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-17 09:16:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-17 09:44:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-17 11:47:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-10-17 11:47:21 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'gsb2025' in Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'myroot', Object(SensitiveParameterValue), 'gsb2025', 3306, '', 0)
+#1 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `idvisit...', Array, false)
+#4 Z:\BTS2\AP\GSBFrais-V2 - Copie\app\Models\GsbModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+#5 Z:\BTS2\AP\GSBFrais-V2 - Copie\app\Controllers\Connexion.php(52): App\Models\GsbModel->get_infos_visiteur('test', 'test')
+#6 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+#7 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+#8 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 Z:\BTS2\AP\GSBFrais-V2 - Copie\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBF...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'gsb2025' in Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `idvisit...', Array, false)
+#3 Z:\BTS2\AP\GSBFrais-V2 - Copie\app\Models\GsbModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+#4 Z:\BTS2\AP\GSBFrais-V2 - Copie\app\Controllers\Connexion.php(52): App\Models\GsbModel->get_infos_visiteur('test', 'test')
+#5 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+#6 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+#7 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 Z:\BTS2\AP\GSBFrais-V2 - Copie\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBF...')
+#12 {main}
+CRITICAL - 2025-10-17 11:47:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'gsb2025'
+[Method: POST, Route: connexion/valider]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `idvisiteur`, `nom`, `prenom`, `login`
+FROM `visiteur`
+WHERE `login` = :login:
+AND `mdp` = :mdp:', [...], false)
+ 3 APPPATH\Models\GsbModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Connexion.php(52): App\Models\GsbModel->get_infos_visiteur('test', 'test')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+ERROR - 2025-10-17 11:52:08 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'gsb2025' in Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'myroot', Object(SensitiveParameterValue), 'gsb2025', 3306, '', 0)
+#1 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `idvisit...', Array, false)
+#4 Z:\BTS2\AP\GSBFrais-V2 - Copie\app\Models\GsbModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+#5 Z:\BTS2\AP\GSBFrais-V2 - Copie\app\Controllers\Connexion.php(52): App\Models\GsbModel->get_infos_visiteur('test', 'test')
+#6 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+#7 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+#8 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 Z:\BTS2\AP\GSBFrais-V2 - Copie\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBF...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'gsb2025' in Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `idvisit...', Array, false)
+#3 Z:\BTS2\AP\GSBFrais-V2 - Copie\app\Models\GsbModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+#4 Z:\BTS2\AP\GSBFrais-V2 - Copie\app\Controllers\Connexion.php(52): App\Models\GsbModel->get_infos_visiteur('test', 'test')
+#5 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+#6 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+#7 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 Z:\BTS2\AP\GSBFrais-V2 - Copie\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBF...')
+#12 {main}
+CRITICAL - 2025-10-17 11:52:08 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'gsb2025'
+[Method: POST, Route: connexion/valider]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `idvisiteur`, `nom`, `prenom`, `login`
+FROM `visiteur`
+WHERE `login` = :login:
+AND `mdp` = :mdp:', [...], false)
+ 3 APPPATH\Models\GsbModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Connexion.php(52): App\Models\GsbModel->get_infos_visiteur('test', 'test')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+DEBUG - 2025-10-17 11:52:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-17 11:52:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-17 11:53:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-17 11:53:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-17 12:29:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-17 12:29:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-17 12:29:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-17 12:29:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-17 14:04:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-17 14:04:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-17 14:04:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-10-17 14:04:35 --> mysqli_sql_exception: Unknown column 'idvisiteur' in 'field list' in Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `idvisit...', 0)
+#1 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `idvisit...')
+#2 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `idvisit...')
+#3 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `idvisit...', Array, false)
+#4 Z:\BTS2\AP\GSBFrais-V2 - Copie\app\Models\GsbModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+#5 Z:\BTS2\AP\GSBFrais-V2 - Copie\app\Controllers\Connexion.php(52): App\Models\GsbModel->get_infos_visiteur('testvisiteur', 'test')
+#6 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+#7 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+#8 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 Z:\BTS2\AP\GSBFrais-V2 - Copie\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBF...')
+#13 {main}
+CRITICAL - 2025-10-17 14:04:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'idvisiteur' in 'field list'
+[Method: POST, Route: connexion/valider]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `idvisiteur`, `nom`, `prenom`, `login`
+FROM `utilisateur`
+WHERE `login` = :login:
+AND `mdp` = :mdp:', [...], false)
+ 2 APPPATH\Models\GsbModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Connexion.php(52): App\Models\GsbModel->get_infos_visiteur('testvisiteur', 'test')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+CRITICAL - 2025-10-17 14:04:35 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'idvisiteur' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `idvisiteur`, `nom`, `prenom`, `login`
+FROM `utilisateur`
+WHERE `login` = \'testvisiteur\'
+AND `mdp` = \'test\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `idvisiteur`, `nom`, `prenom`, `login`
+FROM `utilisateur`
+WHERE `login` = \'testvisiteur\'
+AND `mdp` = \'test\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `idvisiteur`, `nom`, `prenom`, `login`
+FROM `utilisateur`
+WHERE `login` = :login:
+AND `mdp` = :mdp:', [...], false)
+ 4 APPPATH\Models\GsbModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Connexion.php(52): App\Models\GsbModel->get_infos_visiteur('testvisiteur', 'test')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+CRITICAL - 2025-10-17 14:04:35 --> [Caused by] mysqli_sql_exception: Unknown column 'idvisiteur' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `idvisiteur`, `nom`, `prenom`, `login`
+FROM `utilisateur`
+WHERE `login` = \'testvisiteur\'
+AND `mdp` = \'test\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `idvisiteur`, `nom`, `prenom`, `login`
+FROM `utilisateur`
+WHERE `login` = \'testvisiteur\'
+AND `mdp` = \'test\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `idvisiteur`, `nom`, `prenom`, `login`
+FROM `utilisateur`
+WHERE `login` = \'testvisiteur\'
+AND `mdp` = \'test\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `idvisiteur`, `nom`, `prenom`, `login`
+FROM `utilisateur`
+WHERE `login` = :login:
+AND `mdp` = :mdp:', [...], false)
+ 5 APPPATH\Models\GsbModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Connexion.php(52): App\Models\GsbModel->get_infos_visiteur('testvisiteur', 'test')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+ERROR - 2025-10-17 14:15:40 --> mysqli_sql_exception: Table 'gsb_frais2025.visiteur' doesn't exist in Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `idvisit...', 0)
+#1 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `idvisit...')
+#2 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `idvisit...')
+#3 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `idvisit...', Array, false)
+#4 Z:\BTS2\AP\GSBFrais-V2 - Copie\app\Models\GsbModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+#5 Z:\BTS2\AP\GSBFrais-V2 - Copie\app\Controllers\Connexion.php(52): App\Models\GsbModel->get_infos_visiteur('testvisiteur', 'test')
+#6 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+#7 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+#8 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 Z:\BTS2\AP\GSBFrais-V2 - Copie\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 Z:\BTS2\AP\GSBFrais-V2 - Copie\system\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBF...')
+#13 {main}
+CRITICAL - 2025-10-17 14:15:40 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'gsb_frais2025.visiteur' doesn't exist
+[Method: POST, Route: connexion/valider]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `idvisiteur`, `nom`, `prenom`, `login`
+FROM `visiteur`
+WHERE `login` = :login:
+AND `mdp` = :mdp:', [...], false)
+ 2 APPPATH\Models\GsbModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Connexion.php(52): App\Models\GsbModel->get_infos_visiteur('testvisiteur', 'test')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+CRITICAL - 2025-10-17 14:15:40 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'gsb_frais2025.visiteur' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `idvisiteur`, `nom`, `prenom`, `login`
+FROM `visiteur`
+WHERE `login` = \'testvisiteur\'
+AND `mdp` = \'test\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `idvisiteur`, `nom`, `prenom`, `login`
+FROM `visiteur`
+WHERE `login` = \'testvisiteur\'
+AND `mdp` = \'test\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `idvisiteur`, `nom`, `prenom`, `login`
+FROM `visiteur`
+WHERE `login` = :login:
+AND `mdp` = :mdp:', [...], false)
+ 4 APPPATH\Models\GsbModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Connexion.php(52): App\Models\GsbModel->get_infos_visiteur('testvisiteur', 'test')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')
+CRITICAL - 2025-10-17 14:15:40 --> [Caused by] mysqli_sql_exception: Table 'gsb_frais2025.visiteur' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `idvisiteur`, `nom`, `prenom`, `login`
+FROM `visiteur`
+WHERE `login` = \'testvisiteur\'
+AND `mdp` = \'test\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `idvisiteur`, `nom`, `prenom`, `login`
+FROM `visiteur`
+WHERE `login` = \'testvisiteur\'
+AND `mdp` = \'test\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `idvisiteur`, `nom`, `prenom`, `login`
+FROM `visiteur`
+WHERE `login` = \'testvisiteur\'
+AND `mdp` = \'test\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `idvisiteur`, `nom`, `prenom`, `login`
+FROM `visiteur`
+WHERE `login` = :login:
+AND `mdp` = :mdp:', [...], false)
+ 5 APPPATH\Models\GsbModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Connexion.php(52): App\Models\GsbModel->get_infos_visiteur('testvisiteur', 'test')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')

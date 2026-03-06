@@ -1,0 +1,13 @@
+CRITICAL - 2025-11-18 15:21:40 --> ParseError: syntax error, unexpected identifier "procedure_mmise_a_jour_frais_f..."
+[Method: GET, Route: /]
+in APPPATH\Models\GsbModel.php on line 174.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\app\\Models\\GsbModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\GsbModel')
+ 3 APPPATH\Controllers\Connexion.php(14): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\GsbModel')
+ 4 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Connexion->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2\\AP\\GSBFrais-V2 - Copie\\public\\index.php')

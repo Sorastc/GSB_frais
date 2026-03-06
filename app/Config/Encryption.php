@@ -53,7 +53,7 @@ class Encryption extends BaseConfig
      * Encryption digest
      * --------------------------------------------------------------------------
      *
-     * HMAC digest to use, e.g. 'SHA512' or 'SHA256'. Default value is 'SHA512'.
+     * HMAC digest to use, e.g. 'SHA512' or 'SHA256'. Default value is 'SHA512'. zdzd
      */
     public string $digest = 'SHA512';
 

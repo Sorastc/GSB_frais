@@ -5,15 +5,63 @@ namespace App\Controllers;
 use App\Models\GsbModel;
 use App\Libraries\Gsb_lib;
 
+/**
+ * Contrôleur de gestion des fiches de frais d'un visiteur.
+ * 
+ * Permet à un visiteur connecté de saisir, modifier et supprimer
+ * ses frais forfaitaires et hors forfait pour le mois en cours.
+ */
 class Gererfrais extends BaseController
 {
+    /**
+     * Année de la fiche de frais courante.
+     * 
+     * @var string
+     */
     private $id_annee;
+
+    /**
+     * Mois de la fiche de frais courante.
+     * 
+     * @var string
+     */
     private $id_mois;
+
+    /**
+     * Identifiant de la fiche de frais courante.
+     * 
+     * @var int|null
+     */
     private $id_fiche;
+
+    /**
+     * Identifiant du visiteur connecté.
+     * 
+     * @var int|null
+     */
     private $id_visiteur;
+
+    /**
+     * Instance de la bibliothèque GSB.
+     * 
+     * @var Gsb_lib
+     */
     protected $gsb_lib;
+
+    /**
+     * Instance du modèle GSB.
+     * 
+     * @var GsbModel
+     */
     protected $gsb_model;
 
+    /**
+     * Constructeur du contrôleur.
+     * 
+     * Charge les helpers, instancie la bibliothèque et le modèle GSB,
+     * initialise l'année et le mois courants, et récupère la fiche
+     * de frais existante si elle existe.
+     */
     public function __construct()
     {
         helper(['url', 'form', 'html']);
@@ -32,10 +80,18 @@ class Gererfrais extends BaseController
         }
     }
 
-    /** Méthode par défaut */
+    /**
+     * Méthode par défaut
+     * 
+     * Vérifie la connexion de l'utilisateur et crée une nouvelle fiche
+     * de frais si c'est le premier accès du mois, puis délègue l'affichage
+     * à la méthode commun().
+     * 
+     * @return string|\CodeIgniter\HTTP\RedirectResponse La vue assemblée ou une redirection vers la page de connexion
+     */
     public function index()
     {
-        // Vérifie si l’utilisateur est connecté
+        // Vérifie si l'utilisateur est connecté
         if (!session()->get('isLoggedIn')) {
             return redirect()->to('/');
         }
@@ -56,7 +112,14 @@ class Gererfrais extends BaseController
         return $this->commun($data);
     }
 
-    /** Validation des frais forfaitaires */
+    /**
+     * Validation des frais forfaitaires
+     * 
+     * Récupère les frais forfaitaires soumis via le formulaire POST
+     * et effectue leur mise à jour en base de données.
+     * 
+     * @return string La vue assemblée avec un message de succès ou d'erreur
+     */
     public function valider_maj_fraisforfait()
     {
         $lesFrais = $this->request->getPost('lesFrais');
@@ -69,7 +132,15 @@ class Gererfrais extends BaseController
         return $this->commun($data);
     }
 
-    /** Création d'un nouveau frais hors forfait */
+    /**
+     * Création d'un nouveau frais hors forfait
+     * 
+     * Valide les règles de saisie du formulaire, puis crée un nouveau
+     * frais hors forfait en base de données avec la date, le libellé
+     * et le montant saisis.
+     * 
+     * @return string|\CodeIgniter\HTTP\RedirectResponse La vue assemblée ou retour avec erreurs de validation
+     */
     public function valider_creation_fraishorsforfait()
     {
         $reglesSaisie = [
@@ -106,7 +177,15 @@ class Gererfrais extends BaseController
         return $this->commun($data);
     }
 
-    /** Suppression d'un frais hors forfait */
+    /**
+     * Suppression d'un frais hors forfait
+     * 
+     * Supprime le frais hors forfait correspondant à l'identifiant
+     * passé en paramètre et affiche un message de confirmation ou d'erreur.
+     * 
+     * @param  int    $id_fraishorsforfait  Identifiant du frais hors forfait à supprimer
+     * @return string La vue assemblée avec un message de succès ou d'erreur
+     */
     public function supprimer_fraishorsforfait($id_fraishorsforfait)
     {
         $suppOk = $this->gsb_model->supprimer_frais_hors_forfait($id_fraishorsforfait);
@@ -118,6 +197,16 @@ class Gererfrais extends BaseController
         return $this->commun($data);
     }
 
+    /**
+     * Traitement commun pour l'affichage de la page de gestion des frais
+     * 
+     * Assemble toutes les vues nécessaires : entête, frais forfaitaires
+     * avec leur formulaire d'édition, frais hors forfait avec leur tableau
+     * et formulaire d'ajout, et pied de page.
+     * 
+     * @param  array  $data  Tableau de données contenant les messages d'info/erreur
+     * @return void
+     */
     private function commun($data)
     {
         echo view('structures/page_entete');

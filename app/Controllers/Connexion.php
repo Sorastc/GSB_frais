@@ -3,10 +3,26 @@ namespace App\Controllers;
 use DateTime;
 use App\Models\GsbModel;
 
+/**
+ * Contrôleur de gestion de la connexion et déconnexion des utilisateurs.
+ * 
+ * Gère l'authentification des visiteurs, la validation du formulaire
+ * de connexion ainsi que l'expiration du mot de passe.
+ */
 class Connexion extends BaseController
 {
+    /**
+     * Instance du modèle GSB.
+     * 
+     * @var GsbModel
+     */
     protected $gsb_model;
 
+    /**
+     * Constructeur du contrôleur.
+     * 
+     * Charge les helpers URL et form, et instancie le modèle GSB.
+     */
     public function __construct()
     {
         helper(['url', 'form']); // helpers URL et form
@@ -15,7 +31,9 @@ class Connexion extends BaseController
     }
 
     /**
-     * Affiche l’écran de connexion
+     * Affiche l'écran de connexion
+     * 
+     * @return string La vue assemblée avec l'entête, le formulaire de connexion et le pied de page
      */
     public function login()
     {
@@ -27,6 +45,13 @@ class Connexion extends BaseController
 
     /**
      * Valide la saisie du formulaire de connexion
+     * 
+     * Vérifie les règles de saisie, authentifie l'utilisateur,
+     * contrôle l'expiration du mot de passe (6 mois) et initialise
+     * la session si la connexion est réussie.
+     * 
+     * @return \CodeIgniter\HTTP\RedirectResponse Redirection vers l'accueil, la modification
+     *                                            du mot de passe ou retour avec message d'erreur
      */
     public function valider()
     {
@@ -87,7 +112,12 @@ class Connexion extends BaseController
     }
 
     /**
-     * Déconnecte l’utilisateur
+     * Déconnecte l'utilisateur
+     * 
+     * Supprime toutes les données de session liées à l'utilisateur
+     * et redirige vers la page d'accueil avec un message de confirmation.
+     * 
+     * @return \CodeIgniter\HTTP\RedirectResponse Redirection vers la page de connexion
      */
     public function deconnexion()
     {

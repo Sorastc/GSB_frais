@@ -5,14 +5,55 @@ namespace App\Controllers;
 use App\Models\GsbModel;
 use App\Libraries\Gsb_lib;
 
+/**
+ * Contrôleur d'affichage de l'état des fiches de frais d'un visiteur.
+ * 
+ * Permet à un visiteur connecté de consulter ses fiches de frais
+ * par mois, avec les détails des frais forfaitaires et hors forfait.
+ */
 class Etatfrais extends BaseController
 {
+    /**
+     * Couple année/mois sélectionné.
+     * 
+     * @var string|null
+     */
     private $annee_mois;
+
+    /**
+     * Identifiant du visiteur connecté.
+     * 
+     * @var int|null
+     */
     private $id_visiteur;
+
+    /**
+     * Identifiant de la fiche de frais courante.
+     * 
+     * @var int|null
+     */
     private $id_fiche;
+
+    /**
+     * Instance de la bibliothèque GSB.
+     * 
+     * @var Gsb_lib
+     */
     protected $gsb_lib;
+
+    /**
+     * Instance du modèle GSB.
+     * 
+     * @var GsbModel
+     */
     protected $gsb_model;
 
+    /**
+     * Constructeur du contrôleur.
+     * 
+     * Charge les helpers, instancie la bibliothèque et le modèle GSB,
+     * et récupère l'identifiant de l'utilisateur depuis la session.
+     */
     public function __construct()
     {
         helper(['url', 'form']);
@@ -23,10 +64,17 @@ class Etatfrais extends BaseController
         $this->id_visiteur = session()->get('idUtilisateur');
     }
 
-    /** Méthode par défaut */
+    /**
+     * Méthode par défaut
+     * 
+     * Vérifie la connexion de l'utilisateur, initialise les propriétés
+     * et délègue l'affichage à la méthode commun().
+     * 
+     * @return string|\CodeIgniter\HTTP\RedirectResponse La vue assemblée ou une redirection vers la page de connexion
+     */
     public function index()
     {
-        // Vérifie si l’utilisateur est connecté
+        // Vérifie si l'utilisateur est connecté
         if (!session()->get('isLoggedIn')) {
             return redirect()->to('/');
         }
@@ -36,14 +84,29 @@ class Etatfrais extends BaseController
         return $this->commun();
     }
 
-    /** Sélection d’un mois depuis la liste déroulante */
+    /**
+     * Sélection d'un mois depuis la liste déroulante
+     * 
+     * Récupère le mois sélectionné via le formulaire POST
+     * et délègue l'affichage à la méthode commun().
+     * 
+     * @return string|\CodeIgniter\HTTP\RedirectResponse La vue assemblée pour le mois sélectionné
+     */
     public function selectionner_mois()
     {
         $this->annee_mois = $this->request->getPost('lstMois');
         return $this->commun();
     }
 
-    /** Traitement commun pour affichage de la page */
+    /**
+     * Traitement commun pour affichage de la page
+     * 
+     * Récupère les mois disponibles, construit la liste déroulante,
+     * charge la fiche de frais du mois sélectionné avec ses frais
+     * forfaitaires et hors forfait, et assemble toutes les vues.
+     * 
+     * @return \CodeIgniter\HTTP\RedirectResponse|void Redirection si aucune fiche disponible, sinon affichage des vues
+     */
     private function commun()
     {
         echo view('structures/page_entete');
